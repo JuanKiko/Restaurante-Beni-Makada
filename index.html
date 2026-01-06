@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Restaurante - Menús, Bocadillos y Raciones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .contacto-header {
+            background-color: #b71c1c;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .telefono {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+
+        .horario {
+            font-size: 14px;
+        }
+
+        /* Navegación */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Secciones */
+        .seccion {
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .seccion h2 {
+            color: #d32f2f;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #d32f2f;
+            padding-bottom: 10px;
+        }
+
+        /* Menú */
+        .categoria {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .producto {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .producto:last-child {
+            border-bottom: none;
+        }
+
+        .nombre-producto {
+            font-weight: bold;
+        }
+
+        .precio {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        /* Botones */
+        .boton-whatsapp {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .boton-whatsapp:hover {
+            background-color: #128C7E;
+        }
+
+        .boton-pedido {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .boton-pedido:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        .info-footer {
+            margin: 20px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 12px;
+            }
+
+            .producto {
+                flex-direction: column;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">🍽️ BENI MAKADA RESTAURANTE </div>
+        <p>Menús del día • Bocadillos • Raciones • Para llevar</p>
+
+        <div class="contacto-header">
+            <div class="telefono">📞 <a href="tel:+34333666555" style="color:white;">93 873 55 44</a></div>
+            <div class="horario">🕐 Horario: Lunes a Domingo 12:00-16:00 / 20:00-00:00</div>
+        </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#menus">Menús del día</a>
+        <a href="#bocadillos">Bocadillos</a>
+        <a href="#raciones">Raciones</a>
+        <a href="#llevar">Para llevar</a>
+        <a href="#contacto">Contacto y ubicación</a>
+    </nav>
+
+    <!-- Menús del día -->
+    <section id="menus" class="seccion">
+        <h2>🍽️ MENÚS DEL DÍA</h2>
+
+        <div class="categoria">
+            <h3>Menú completo (Primero + Segundo + Postre + Bebida)</h3>
+            <div class="producto">
+                <div class="nombre-producto">Menú del día</div>
+                <div class="precio">12,50€</div>
+            </div>
+            <div class="producto">
+                <div class="nombre-producto">Menú especial fin de semana</div>
+                <div class="precio">15,00€</div>
+            </div>
+            <div class="producto">
+                <div class="nombre-producto">Menú especial festivo</div>
+                <div class="precio">20,00€</div>
+            </div>
+            <p style="margin-top: 15px; font-style: italic;">
+                * Incluye pan y bebida (agua, Té o refresco)
+            </p>
+        </div>
+    </section>
+
+    <!-- Bocadillos -->
+    <section id="bocadillos" class="seccion">
+        <h2>🥪 BOCADILLOS</h2>
+
+        <div class="categoria">
+            <div class="producto">
+                <div class="nombre-producto">Bocadillo de Tortilla de patatas</div>
+                <div class="precio">4,50€</div>
+            </div>
+            <div class="producto">
+                <div class="nombre-producto">Bocadillo de Pollo</div>
+                <div class="precio">4,80€</div>
+            </div>
+            <div class="producto">
+                <div class="nombre-producto">Bocadillo de calamares</div>
+                <div class="precio">5,20€</div>
+            </div>
+            <div class="producto">
+                <div class="nombre-producto">Bocadillo mixto (carne y pollo)</div>
+                <div class="precio">4,70€</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Raciones -->
+    <section id="raciones" class="seccion">
+        <h2>🍤 RACIONES Y TAPAS</h2>
+
+        <div class="categoria">
+            <div class="producto">
+                <div class="nombre-producto">Patatas bravas</div>
+                <div class="precio">5,00€</div>
+            </div>
+            <div class="producto">
+                <div class="nombre-producto">Calamares a la romana</div>
+                <div class="precio">8,50€</div>
+            </div>
+            <div class="producto">
+                <div class="nombre-producto">Croquetas caseras (6 unidades)</div>
+                <div class="precio">6,50€</div>
+            </div>
+            <div class="producto">
+                <div class="nombre-producto">Ensaladilla rusa</div>
+                <div class="precio">5,50€</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para llevar -->
+    <section id="llevar" class="seccion">
+        <h2>🥡 COMIDA PARA LLEVAR</h2>
+
+        <div class="categoria">
+            <p>✅ Todos nuestros platos disponibles para llevar</p>
+            <p>✅ Envase especial para mantener temperatura</p>
+            <p>✅ Llama y recoge en 15-20 minutos</p>
+
+            <div style="margin-top: 20px;">
+                <a href="https://wa.me/341666444333?text=Hola,%20me%20gustaría%20hacer%20un%20pedido%20para%20llevar"
+                    class="boton-whatsapp" target="_blank">
+                    📱 Pedir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="seccion">
+        <h2>📍 CONTACTO Y UBICACIÓN</h2>
+
+        <div class="categoria">
+            <h3>📞 Cómo hacer tu pedido:</h3>
+            <p>1. Llama al <strong>912 345 678</strong></p>
+            <p>2. Envíanos un mensaje por WhatsApp</p>
+            <p>3. Paga con Bizum al mismo número</p>
+
+            <h3 style="margin-top: 20px;">💳 Pago con Bizum:</h3>
+            <p>Envía el pago al número: <strong>612 345 678</strong></p>
+            <p>En el concepto pon tu nombre y "pedido"</p>
+
+            <h3 style="margin-top: 20px;">🏠 Dirección:</h3>
+            <p>Calle Principal, 123 - Tu Ciudad</p>
+            <p>Recogida en local disponible</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>[NOMBRE DE TU RESTAURANTE]</h3>
+
+        <div class="info-footer">
+            <p>📞 912 345 678</p>
+            <p>📱 WhatsApp: 612 345 678</p>
+            <p>📍 Calle Principal, 123 - Tu Ciudad</p>
+        </div>
+
+        <div style="margin: 20px 0;">
+            <a href="https://wa.me/34666444333" class="boton-whatsapp" target="_blank">
+                💬 Haz tu pedido por WhatsApp
+            </a>
+        </div>
+
+        <p style="font-size: 14px; margin-top: 20px;">
+            © 2024 [Nombre de tu Restaurante]. Todos los derechos reservados.
+        </p>
+    </footer>
+
+    <script>
+        // Script básico para pedidos
+        document.addEventListener('DOMContentLoaded', function () {
+            // Botones de pedido (los añadiremos en la Fase 2)
+            const productos = document.querySelectorAll('.producto');
+
+            productos.forEach(producto => {
+                const nombre = producto.querySelector('.nombre-producto').textContent;
+                const precio = producto.querySelector('.precio').textContent;
+
+                // Crear botón de pedido
+                const boton = document.createElement('button');
+                boton.className = 'boton-pedido';
+                boton.textContent = 'Pedir';
+                boton.dataset.nombre = nombre;
+                boton.dataset.precio = precio;
+
+                // Añadir evento (por ahora solo alerta)
+                boton.addEventListener('click', function () {
+                    alert(`Próximamente podrás pedir: ${nombre}\nPrecio: ${precio}\n\nPor ahora, llama al 912 345 678`);
+                });
+
+                producto.appendChild(boton);
+            });
+        });
+    </script>
+</body>
+
+</html>
